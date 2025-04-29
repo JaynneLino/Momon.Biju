@@ -1,0 +1,17 @@
+:root {
+    /* Cores */
+    --cor-fundo: #121212;
+    --cor-principal: #121212;
+    --cor-secundaria: #e7a9b3;   /* Rosa queimado */
+    --cor-destaque: #f06292;     /* Pink para CTA */
+    --cor-hover: #f8c8d6;        /* Rosa claro para hover */
+    --cor-texto: #f9f9f9;
+    --cor-dourado: #d4af37;      /* Opcional: detalhes finos */
+  
+    /* Fontes */
+    --fonte-principal: 'Playfair Display', serif;
+    --fonte-secundaria: 'Poppins', sans-serif;
+  
+    /* Estética */
+    --borda-radius: 12px;
+  }

@@ -1,0 +1,292 @@
+@import url('variables.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+header {
+  position: relative;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 30px;
+}
+
+.menu-toggle {
+  background: var(--cor-principal);
+  color: var(--cor-secundaria);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.nav-gaveta {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Esconde o menu fora da tela no lado direito */
+  width: 250px;
+  height: 100%;
+  background-color: var(--cor-principal);
+  transition: right 0.3s ease; /* Animação suave ao abrir */
+  z-index: 999;
+  padding: 20px;
+}
+
+.nav-gaveta.ativo {
+  right: 0; /* Mostra o menu ao adicionar a classe 'ativo' */
+}
+
+.nav-gaveta ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-gaveta li {
+  margin-bottom: 20px;
+}
+
+.nav-gaveta a {
+  all: unset; /* Remove o estilo padrão de link (como azul e sublinhado) */
+  color: var(--cor-secundaria); /* Rosa queimado sofisticado */
+  font-family: var(--fonte-secundaria); /* Fonte moderna e limpa */
+  font-size: 1.1rem;
+  display: block;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-gaveta a:hover {
+  color: var(--cor-hover); /* Rosa claro no hover */
+  text-decoration: underline;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--cor-secundaria);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.produto {
+  background-color: white;
+  border: 1px solid #e7c3c3;
+  border-radius: var(--borda-radius);
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+}
+
+.produto img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.botao {
+  display: inline-block;
+  background-color: var(--cor-destaque);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.botao:hover {
+  background-color: var(--cor-hover);
+}
+
+footer {
+  background-color: var(--cor-principal);
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--cor-secundaria);
+}
+
+footer a {
+  color: var(--cor-secundaria);
+  text-decoration: underline;
+}
+
+.hero {
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagens/hero.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-family: var(--fonte-principal);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .botao {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: var(--borda-radius);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .botao:hover {
+  background-color: var(--cor-hover);
+}
+
+
+.carrossel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.carrossel-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 20px;
+}
+
+.carrossel-item {
+  min-width: 200px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #e7c3c3;
+  border-radius: var(--borda-radius);
+  padding: 15px;
+}
+
+.carrossel-item img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.carrossel-item p {
+  color: var(--cor-principal);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+h3 {
+  color: var(--cor-secundaria);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.carrossel-btn.prev {
+  left: 10px;
+}
+
+.carrossel-btn.next {
+  right: 10px;
+}
+
+/* Botão Voltar ao Topo */
+#voltar-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Inicialmente escondido */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#voltar-topo:hover {
+  background-color: var(--cor-hover);
+  transform: scale(1.1);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .produto {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
