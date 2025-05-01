@@ -1,16 +1,18 @@
 :root {
     /* Cores */
-    --cor-fundo: #121212;
-    --cor-principal: #121212;
-    --cor-secundaria: #e7a9b3;   /* Rosa queimado */
+    --cor-fundo: #000;      /* Rosa vibrante */
+    --cor-principal: #FFFFFF;       /* Preto para o fundo */
+    --cor-secundaria: #ff0198; /* Rosa para o texto */
     --cor-destaque: #f06292;     /* Pink para CTA */
-    --cor-hover: #f8c8d6;        /* Rosa claro para hover */
-    --cor-texto: #f9f9f9;
-    --cor-dourado: #d4af37;      /* Opcional: detalhes finos */
+    --cor-hover: #00b27a;        /* Verde menta para hover */
+    --cor-texto: #FFFFFF;      /*  texto */
+    --cor-texto-secundario: #ff0198; /* Para o texto secundário */
+    --cor-dourado: #FFD700;      /* Opcional: detalhes finos */
   
     /* Fontes */
     --fonte-principal: 'Playfair Display', serif;
     --fonte-secundaria: 'Poppins', sans-serif;
+    --fonte-logo: 'Sacramento', cursive;
   
     /* Estética */
     --borda-radius: 12px;

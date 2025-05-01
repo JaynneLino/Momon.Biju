@@ -11,37 +11,62 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/carrossel.css">
   <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/carrinho.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  
+
 </head>
 <body>
   <header>
-    <h1>Momon.bijus</h1>
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="logo">
+       <img src="imagens/logo-header.png" alt="Logo Momon.bijus" class="logo" />
+       <h1>Momon.bijus</h1>
+    </div>
     <nav class="nav-gaveta">
       <ul>
-        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#pedidos">Pedidos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
+    <button id="toggle-carrinho" aria-label="Abrir carrinho">
+      <i class="fas fa-shopping-cart"></i>
+    </button>
   </header>
+
+
+  <div id="carrinho" class="carrinho">
+    <h2>Seu carrinho</h2>
+    <ul id="lista-carrinho">
+      <li id="mensagem-vazio">Seu carrinho está vazio</li>
+    </ul>
+    <p>Total: R$ <span id="total">0.00</span></p>
+    <button id="finalizar-pedido">Finalizar Pedido</button>
+    <button id="fechar-carrinho" aria-label="Fechar carrinho">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Descubra o Brilho da Elegância</h1>
-      <p>Bijuterias artesanais que refletem sua beleza única.</p>
+      <p>Acessórios que refletem sua beleza única.</p>
       <a href="#catalogo" class="botao">Ver Catálogo</a>
     </div>
   </section>
 
   <main>
     <section id="catalogo">
-      <h2>Catálogo</h2>
+      <h2>Destques</h2>
       <div class="carrossel">
         <button class="carrossel-btn prev" aria-label="Anterior">❮</button>
         <div class="carrossel-wrapper">
@@ -49,32 +74,46 @@
             <img src="https://img.febijus.com.br/febijus/produtos/brinco-folheado-a-ouro-18k-e-prata-925-oval-vazado-1744057125.3449.jpg" alt="Brinco dourado" />
             <h3>Brinco Oval Vazado</h3>
             <p>R$ 29,90</p>
-          </div>
+            <div class="card-footer">
+              <button class="adicionar-carrinho" data-nome="Brinco Oval Vazado" data-preco="29,90">Adicionar ao carrinho</button>
+            </div>
+            </div>
           <div class="carrossel-item">
             <img src="https://img.febijus.com.br/febijus/produtos/brinco-folheado-a-ouro-18k-e-prata-botton-martelado-1742310281.9312.jpg" alt="Colar com pingente" />
             <h3>Brinco Botton Martelado</h3>
             <p>R$ 39,90</p>
+            <div class="card-footer">
+              <button class="adicionar-carrinho" data-nome="Brinco Botton Martelado" data-preco="29,90">Adicionar ao carrinho</button>
+            </div>
           </div>
           <div class="carrossel-item">
             <img src="https://img.febijus.com.br/febijus/produtos/conjunto-colar-e-brinco-folheado-a-ouro-18k-coracoes-de-zirconia-vermelha-1745341220.0435.jpg" alt="Pulseira artesanal" />
             <h3>Conjunto Colar e Brinco Corações de Zirconia Vermelha</h3>
-            <p>R$ 19,90</p>
-          </div>
+            <p>R$ 49,90</p>
+            <div class="card-footer">
+              <button class="adicionar-carrinho" data-nome="Conjunto Colar e Brinco Corações de Zirconia Vermelha" data-preco="29,90">Adicionar ao carrinho</button>
+            </div>          </div>
           <div class="carrossel-item">
             <img src="https://img.febijus.com.br/febijus/produtos/colar-duplo-folheado-a-ouro-18k-e-prata-corrente-fita-e-venziana-com--pai-nosso--craavejado-1745339539.9195.jpg" alt="Pulseira artesanal" />
             <h3>Colar Duplo Corrente Fita e Venziana com "Pai nosso" Craavejado</h3>
-            <p>R$ 19,90</p>
-          </div>
+            <p>R$ 59,90</p>
+            <div class="card-footer">
+              <button class="adicionar-carrinho" data-nome="Colar Duplo Corrente Fita e Venziana com "Pai nosso"" data-preco="29,90">Adicionar ao carrinho</button>
+            </div>          </div>
           <div class="carrossel-item">
             <img src="https://img.febijus.com.br/febijus/produtos/brinco-folheado-a-ouro-18k-e-prata-gota-martelado-com-cristal-1745341838.6204.jpg" alt="Pulseira artesanal" />
             <h3>Brinco Gota Martelado Com Cristal</h3>
-            <p>R$ 19,90</p>
-          </div>
+            <p>R$ 29,90</p>
+            <div class="card-footer">
+              <button class="adicionar-carrinho" data-nome="Brinco Gota Martelado Com Cristal" data-preco="29,90">Adicionar ao carrinho</button>
+            </div>          </div>
           <div class="carrossel-item">
             <img src="https://img.febijus.com.br/febijus/produtos/brinco-earcuff-folheado-a-ouro-18k-e-prata-925-flores-e-borboleta-1745265860.8274.jpg" alt="Pulseira artesanal" />
             <h3>Brinco Earcuff Flores e Borboleta</h3>
-            <p>R$ 19,90</p>
-          </div>
+            <p>R$ 39,90</p>
+            <div class="card-footer">
+              <button class="adicionar-carrinho" data-nome="Brinco Earcuff Flores e Borboleta" data-preco="29,90">Adicionar ao carrinho</button>
+            </div>          </div>
         </div>
         <button class="carrossel-btn next" aria-label="Próximo">❯</button>
       </div>
@@ -82,19 +121,24 @@
 
     <section id="sobre">
       <h2>Sobre a Momon.bijus</h2>
-      <p>A Momon.bijus é uma loja artesanal de bijuterias feitas com carinho, criada para valorizar seu estilo com delicadeza e brilho único.</p>
+      <p>Nunca duvide do seu brilho.
+        Se permita ver e sentir você.
+        Descubra sua identidade e sua beleza única.
+        Torne seus momentos inesquecíveis para si e pra quem estima.
+        Acessórios que refletem seu estilo, agregam beleza e significado, encontram-se aqui.</p>
     </section>
 
     <section id="pedidos">
       <h2>Como Comprar</h2>
       <p>Para fazer seu pedido, entre em contato pelo WhatsApp ou Instagram e informe o nome da peça.</p>
-      <a class="botao" href="https://wa.me/5599999999999" target="_blank">
+      <a class="botao" href="https://wa.me/+351913353129" target="_blank">
         Fazer Pedido no WhatsApp
       </a>
       
       
     </section>
   </main>
+
 
   <footer id="contato">
     <h2>Contato</h2>
@@ -147,6 +191,7 @@
 </script>
   
 <script src="scripts/carrossel.js"></script>
+<script src="scripts/carrinho.js"></script>
   
 </body>
 

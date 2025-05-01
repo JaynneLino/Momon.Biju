@@ -5,7 +5,7 @@
     color: var(--cor-texto);
     width: 100%;
     height: 60vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagens/hero.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://blog.camadijoias.com.br/wp-content/uploads/2023/04/tendencias-2023.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -1,15 +1,27 @@
 header {
-    position: relative;
-    padding: 20px;
+
     background-color: var(--cor-principal);
-    color: var(--cor-secundaria);
 }
 
 header h1 {
     font-size: 1.8rem;
     color: var(--cor-secundaria);
-    margin-bottom: 20px;
+    font-family: var(--fonte-logo, sans-serif); 
+    padding: 3rem; 
 }
+
+header img {
+    position: fixed;
+    top: 0;
+    left: -1%;
+    width: 5rem;;
+    height: 5rem;;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+
+}
+
 
 section {
     padding: 40px 20px;
@@ -60,24 +72,63 @@ footer a {
 @media (min-width: 600px) {
     header {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center; /* Centraliza os elementos horizontalmente */
+        justify-content: center; /* Centraliza os elementos verticalmente */
+        padding: 10px;
+        text-align: center;
     }
 
     header h1 {
-        font-size: 2rem;
-        margin-bottom: 0;
+        font-size: 1.5rem; /* Ajusta o tamanho do título */
+        margin: 0; /* Remove margens extras */
+        padding: 0; /* Remove preenchimento extra */
     }
 
-    section {
-        padding: 60px 40px;
+    header img {
+        position: static; /* Remove o posicionamento fixo */
+        margin-bottom: 10px; /* Adiciona espaço abaixo do logo */
+        width: 4rem; /* Ajusta o tamanho do logo */
+        height: 4rem; /* Ajusta o tamanho do logo */
     }
 }
 
+@media (max-width: 600px) {
+    .logo {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top:1rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem; /* Ajusta o tamanho do título */
+        margin: 0rem 2rem; /* Remove margens extras */
+        padding: 0; /* Remove preenchimento extra */
+    }
+
+    header img {
+        position: relative; /* Remove o posicionamento fixo */
+        width: 3rem; /* Ajusta o tamanho do logo */
+        height: 3rem; /* Ajusta o tamanho do logo */
+    }
+
+    section {
+        padding: 20px 40px;
+    }
+}
+
+
 @media (min-width: 1024px) {
     header {
-        padding: 20px 80px;
+    display: flex;
+    flex-direction: row;
+    height: 7rem;
+    color: var(--cor-secundaria);
+    margin: 0;
+
+
     }
 
     section {

@@ -1,0 +1,182 @@
+@import url('variables.css');
+@import url('base.css');
+@import url('components.css');
+
+
+body {
+
+    font-family: var(--fonte-secundaria);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 3fr)); 
+    gap: 2rem; /* Espaçamento entre os itens */
+    padding: 2rem; /* Espaçamento interno */
+    justify-content: center; /* Centraliza os itens no grid */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    border-radius: var(--borda-radius);
+    border-radius: var(--borda-radius);
+
+}
+
+.item {
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    border-radius: var(--borda-radius);
+    box-shadow: 0 4px 15px rgba(255, 1, 152, 0.2);
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.02);
+}
+
+/* Carrossel */
+.carrossel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+}
+
+.fotos {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    transition: transform 0.4s ease-in-out;
+}
+
+.fotos img {
+    height: 30rem;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: var(--borda-radius);
+
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--cor-secundaria);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.anterior {
+    left: 0;
+}
+
+.proximo {
+    right: 0;
+}
+
+/* Descrição */
+.descricao {
+    margin-top: 10px;
+}
+
+.descricao h2 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.descricao p {
+    font-size: 0.95rem;
+    color: var(--cor-fundo);
+}
+
+.preco {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--cor-destaque);
+    margin: 10px 0;
+}
+
+/* Botão */
+.botao {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    padding: 10px 16px;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+    font-family: var(--fonte-secundaria);
+}
+
+.botao:hover {
+    background-color: var(--cor-hover);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .catalogo {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        
+    }
+
+    .item {
+        padding: 2rem;
+        margin: 1rem;
+        height: 50rem;
+        width: 80%;
+
+    }
+
+    .fotos {
+        gap: 6px;
+    }
+
+    .fotos img {
+        height: 100px;
+        max-width: 140px;
+    }
+
+    .descricao h2 {
+        font-size: 1.1rem;
+    }
+
+    .descricao p {
+        font-size: 0.9rem;
+    }
+
+    .preco {
+        font-size: 1.1rem;
+    }
+
+    .botao {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 4px 8px;
+        font-size: 1rem;
+    }
+}

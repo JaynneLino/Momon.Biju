@@ -1,4 +1,7 @@
 .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--cor-principal);
     color: var(--cor-secundaria);
     border: none;
@@ -6,8 +9,12 @@
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Torna o botão circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-gaveta {
@@ -25,9 +32,13 @@
 }
 
 .nav-gaveta.ativo {
-    right: 0;
+    display: block;
+    position: absolute;
+    top:6.2rem;
+    left: 0;
     /* Show menu when active */
 }
+
 
 .nav-gaveta ul {
     list-style: none;
@@ -48,6 +59,7 @@
     display: block;
     cursor: pointer;
     padding: 8px 0;
+    margin-top: 1.5rem;
     transition: color 0.3s ease;
 }
 
@@ -122,16 +134,19 @@
 
     .menu-toggle {
         display: none;
+        margin-top: 1.5rem;
+        
         /* Hide toggle button on larger screens */
     }
 
     .nav-gaveta {
+        
         position: static;
         width: auto;
         height: auto;
         background-color: transparent;
-        display: flex;
-        justify-content: flex-end;
+        display: block;
+        justify-content: left;
         padding: 0;
         transition: none;
     }
@@ -152,3 +167,4 @@
 
 
 }
+
